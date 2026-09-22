@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Klasowy</title>
+    <link rel="stylesheet" href="styl.css">
+</head>
+<body>
+
+<div class="kontener-quizu">
+    <h1>Quiz Klasowy</h1>
+
+    <div id="ekran-startowy">
+        <div class="sekcja-gracza">
+            <input type="text" id="gracz-imie" placeholder="Wpisz swoje imię..." maxlength="20" required>
+            <button id="start-btn">Rozpocznij Grać</button>
+        </div>
+    </div>
+
+    <div id="ekran-quizu" class="ukryty">
+        <div class="naglowek-pytania">
+            <span id="pytanie-numer">Pytanie 1/10</span>
+            <span id="czas-licznik">Czas: 15s</span>
+        </div>
+
+        <div class="pudelko-pytania">
+            <p id="pytanie-tresc">Treść pytania...</p>
+        </div>
+
+        <div id="odpowiedzi-kontener" class="siatka-odpowiedzi"></div>
+
+        <div id="komunikat" class="komunikat-status"></div>
+
+        <div class="pasek-akcji">
+            <button id="nastepne-btn" class="ukryty">Następne pytanie</button>
+        </div>
+    </div>
+
+    <div id="ekran-koncowy" class="ukryty">
+        <h2>Koniec Quizu!</h2>
+        <div class="pudelko-pytania">
+            <p id="wynik-koncowy">Twój wynik: 0/10</p>
+        </div>
+        <button id="restart-btn">Zagraj ponownie</button>
+    </div>
+
+    <hr>
+
+    <h2>Tabela Najlepszych Wyników</h2>
+    <table>
+        <thead>
+        <tr>
+            <th>#</th>
+            <th>Gracz</th>
+            <th>Wynik</th>
+        </tr>
+        </thead>
+        <tbody id="tabela-wynikow-body"></tbody>
+    </table>
+</div>
+
+<script type="module" src="main.js"></script>
+</body>
+</html>
