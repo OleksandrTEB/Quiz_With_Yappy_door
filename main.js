@@ -10,7 +10,6 @@ import {
 } from './stan.js';
 import { rysujPytanie, pokazKomunikat, rysujWyniki } from './widok.js';
 
-// Elementy DOM
 const ekranStartowy = document.getElementById('ekran-startowy');
 const ekranQuizu = document.getElementById('ekran-quizu');
 const ekranKoncowy = document.getElementById('ekran-koncowy');
