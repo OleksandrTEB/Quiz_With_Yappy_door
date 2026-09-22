@@ -1,7 +1,3 @@
-/**
- * main.js - Moduł integracyjny łączący API, Stan i Widok w spójną całość.
- */
-
 import { pobierzPytania } from './api.js';
 import {
     ustawPytania,
@@ -27,22 +23,17 @@ const czasLicznikEl = document.getElementById('czas-licznik');
 const wynikKoncowyEl = document.getElementById('wynik-koncowy');
 const odpowiedziKontener = document.getElementById('odpowiedzi-kontener');
 
-// Zmienne pomocnicze
 let punkty = 0;
 let nazwaGracza = '';
 let timer = null;
 let pozostalyCzas = 15;
 
-/**
- * Mieszanie pytania dla zachowania losowości (Bonus)
- */
+
 function losujTablice(array) {
     return [...array].sort(() => Math.random() - 0.5);
 }
 
-/**
- * Inicjalizacja aplikacji po załadowaniu drzewa DOM
- */
+
 async function inicjalizujAplikacje() {
     rysujWyniki(pobierzWyniki());
 
@@ -52,9 +43,7 @@ async function inicjalizujAplikacje() {
     odpowiedziKontener.addEventListener('click', obsluzWyborOdpowiedzi);
 }
 
-/**
- * Rozpoczęcie quizu
- */
+
 async function obsluzStart() {
     nazwaGracza = graczImieInput.value.trim();
 
@@ -80,9 +69,7 @@ async function obsluzStart() {
     }
 }
 
-/**
- * Ładowanie pojedynczego pytania
- */
+
 function zaladujPytanie() {
     resetujTimer();
     const pytanie = pobierzAktualnePytanie();
@@ -94,9 +81,7 @@ function zaladujPytanie() {
     uruchomTimer();
 }
 
-/**
- * Obsługa kliknięcia w odpowiedź
- */
+
 function obsluzWyborOdpowiedzi(e) {
     const przycisk = e.target.closest('.przycisk-odpowiedz');
     if (!przycisk || przycisk.disabled) return;
@@ -123,9 +108,7 @@ function obsluzWyborOdpowiedzi(e) {
     nastepneBtn.classList.remove('ukryty');
 }
 
-/**
- * Przejście do następnego pytania lub końca quizu
- */
+
 function obsluzNastepnePytanie() {
     przejdzDoNastepnegoPytania();
 
@@ -136,9 +119,7 @@ function obsluzNastepnePytanie() {
     }
 }
 
-/**
- * Zakończenie quizu i wyświetlenie wyników
- */
+
 function zakonczQuiz() {
     zatrzymajTimer();
     ekranQuizu.classList.add('ukryty');
@@ -151,18 +132,14 @@ function zakonczQuiz() {
     rysujWyniki(pobierzWyniki());
 }
 
-/**
- * Restart aplikacji do ekranu startowego
- */
+
 function obsluzRestart() {
     graczImieInput.value = '';
     ekranKoncowy.classList.add('ukryty');
     ekranStartowy.classList.remove('ukryty');
 }
 
-/**
- * Obsługa timera (Licznik czasu)
- */
+
 function uruchomTimer() {
     pozostalyCzas = 15;
     czasLicznikEl.textContent = `Czas: ${pozostalyCzas}s`;
