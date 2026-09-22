@@ -1,0 +1,165 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f6f9;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.kontener-quizu {
+    background: #ffffff;
+    width: 100%;
+    max-width: 650px;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+hr {
+    margin: 20px 0;
+    border: 0;
+    border-top: 1px solid #e0e0e0;
+}
+
+.sekcja-gracza {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    flex: 1;
+    padding: 10px 14px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+button {
+    padding: 10px 18px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+button:disabled {
+    background-color: #bdc3c7;
+    cursor: not-allowed;
+}
+
+.naglowek-pytania {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    color: #7f8c8d;
+    margin-bottom: 15px;
+}
+
+.pudelko-pytania {
+    background: #ecf0f1;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.siatka-odpowiedzi {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.przycisk-odpowiedz {
+    background-color: #ffffff;
+    color: #2c3e50;
+    border: 2px solid #bdc3c7;
+    padding: 12px;
+    border-radius: 8px;
+    text-align: left;
+    font-size: 15px;
+}
+
+.przycisk-odpowiedz:hover:not(:disabled) {
+    border-color: #3498db;
+    background-color: #ebf5fb;
+}
+
+.przycisk-odpowiedz.poprawna {
+    background-color: #2ecc71 !important;
+    color: #ffffff !important;
+    border-color: #27ae60 !important;
+}
+
+.przycisk-odpowiedz.bledna {
+    background-color: #e74c3c !important;
+    color: #ffffff !important;
+    border-color: #c0392b !important;
+}
+
+.komunikat-status {
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    min-height: 24px;
+    margin-bottom: 15px;
+}
+
+.komunikat-status.sukces {
+    color: #27ae60;
+}
+
+.komunikat-status.blad {
+    color: #c0392b;
+}
+
+.pasek-akcji {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.ukryty {
+    display: none !important;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+th {
+    background-color: #f8f9fa;
+    color: #2c3e50;
+}
