@@ -1,0 +1,12 @@
+[
+  {"pytanie": "Stolicą Polski jest:", "odpowiedzi": ["Kraków", "Warszawa", "Gdańsk", "Poznań"], "poprawna": 1},
+  {"pytanie": "Ile wynosi wynik działania 2 + 2 * 2?", "odpowiedzi": ["6", "8", "4", "10"], "poprawna": 0},
+  {"pytanie": "Która planeta jest najbliżej Słońca?", "odpowiedzi": ["Wenus", "Ziemia", "Merkury", "Mars"], "poprawna": 2},
+  {"pytanie": "W którym roku wybuchła II wojna światowa?", "odpowiedzi": ["1914", "1939", "1945", "1918"], "poprawna": 1},
+  {"pytanie": "Jaki jest symbol chemiczny wody?", "odpowiedzi": ["O2", "CO2", "H2O", "NaCl"], "poprawna": 2},
+  {"pytanie": "Kto napisał 'Pana Tadeusza'?", "odpowiedzi": ["Juliusz Słowacki", "Adam Mickiewicz", "Henryk Sienkiewicz", "Bolesław Prus"], "poprawna": 1},
+  {"pytanie": "Najdłuższa rzeka w Polsce to:", "odpowiedzi": ["Odra", "Warta", "Wisła", "Bug"], "poprawna": 2},
+  {"pytanie": "Ile wynosi pierwiastek kwadratowy z 144?", "odpowiedzi": ["10", "11", "12", "14"], "poprawna": 2},
+  {"pytanie": "Największy ocean na Ziemi to:", "odpowiedzi": ["Atlantycki", "Indyjski", "Spokojny", "Arktyczny"], "poprawna": 2},
+  {"pytanie": "Jaki obiekt jest naturalnym satelitą Ziemi?", "odpowiedzi": ["Słońce", "Księżyc", "Mars", "Jowisz"], "poprawna": 1}
+]

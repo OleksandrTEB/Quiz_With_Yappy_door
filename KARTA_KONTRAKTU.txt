@@ -1,0 +1,56 @@
+KARTA KONTRAKTU
+
+Zespół: Yappy Door Temat: Quiz
+
+Role
+
+Integrator (main.js, index.html):  Artiom Kastsiukevich
+API (api.js):                      Oleksandr Shvab
+Stan (stan.js):                    Oleksandr Shvab
+Widok (widok.js, styl.css):        Ilya Zaremba
+
+1. Szkic ekranu
+
+Narysuj, jak ma wyglądać aplikacja. Prostokąty, podpisy, strzałki.
+
++----------------------------------------------------------------+
+|                        QUIZ KLASOWY                            |
+|                                                                |
+|  Gracz: [ Wpisz imię... ]              [ Rozpocznij Grać ]     |
+|----------------------------------------------------------------|
+|  Pytanie 3/10                             Czas: 12s            |
+|                                                                |
+|  +----------------------------------------------------------+  |
+|  | Treść pytania: Ile wynosi wynik działania 2 + 2 * 2?     |  |
+|  +----------------------------------------------------------+  |
+|                                                                |
+|  [ A: 6 ]                                 [ B: 8 ]             |
+|  [ C: 4 ]                                 [ D: 10 ]            |
+|                                                                |
+|  Status: [ Informacja: Poprawna / Błędna odpowiedź! ]          |
+|                                           [ Następne pytanie ] |
+|----------------------------------------------------------------|
+|                     TABELA NAJLEPSZYCH WYNIKÓW                 |
+|  1. Anna  - 9/10                                               |
+|  2. Piotr - 8/10                                               |
++----------------------------------------------------------------+
+
+2. Kształt jednego elementu w stanie
+
+Zapisz dokładnie tak, jak będzie w kodzie. Nazwy pól bez polskich znaków i spacji. Pamiętaj o polu id.
+
+{
+    pytanie: "Stolicą Polski jest:",
+    odpowiedzi: ["Kraków", "Warszawa", "Gdańsk", "Poznań"],
+    poprawna: 1
+}
+
+3. Funkcje udostępniane przez moduły
+
+plik        nazwa funkcji            przyjmuje                                zwraca
+---------   --------------------     ----------------                         ----------------
+api.js      pobierzPytania()         Nic                                      pytania
+stan.js     ustawPytania()           tablicę pytań                            Nic
+stan.js     pobierzAktualnePytanie() Nic                                    Pytanie z tablicy Lub null
+stan.js     zapiszWynik()            imie, wynik                              Nic
+widok.js    rysujPytanie()           pytanie, numer pytania, lacznie pytań    Nic
